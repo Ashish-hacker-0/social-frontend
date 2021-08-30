@@ -1,0 +1,53 @@
+.Navbar{
+    display: flex;
+    padding: 30px;
+    height: 7vh;
+    width: 100vw;
+    border-bottom: 1px solid lightgray;
+    justify-content:space-between;
+}
+.Navbar img{
+
+    width: 6%;
+    border-radius: 5px;
+    margin: 10px;
+}
+.left,.right{
+    display: flex;
+    align-items: center;
+}
+.left{
+    color: rgb(92, 92, 92);
+    font-weight: 700;
+}
+.right{
+   justify-content: flex-end;
+}
+.right img{
+    border-radius: 50%;
+}
+.right input{
+    border: none;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    padding: 5px 25px;
+    width: 20vw;
+}
+.right div svg{
+    position: absolute;
+    margin: 5px 4px;
+}
+.right button{
+    background-color:#1E90FF;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+}
+.right button svg{
+    margin: 0 3px;
+}

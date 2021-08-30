@@ -1,121 +1,364 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  background-color: #e1eff3  ;
+  padding: 12px;
+  display: flex;
+}
+.left{
+  width: 18%;
+  overflow-y: scroll;
+  height: 90vh;
+}
+.left::-webkit-scrollbar{
+  width: 0px;
+  height: 0;
+  background: none;
+}
+.mid{
+  padding: 10px;
+  width: 70%;
+  height: 90vh;
+  overflow: scroll;
+}
+.mid::-webkit-scrollbar{
+  width: 0;
+}
+.right{
+  width: 18%;
+
+  overflow-y: scroll;
+  height: 90vh;
+}
+.right::-webkit-scrollbar{
+  width: 0px;
+  height: 0;
+  background: none;
+}
+.profile{
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  height: 10vh;
+  background-color: white;
+  justify-content: space-between;
+  color: gray;
+}
+.profile div p:nth-child(1){
+  font-weight: 600;
+  color: gray;
+}
+.menu{
+  background-color: white;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.menu ul {
+  list-style: none;
+  color: rgb(105, 105, 105);
+}
+.menu ul li{
+  font-weight: 600;
+  padding: 10px 20px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.active{
+  color: #1E90FF;
+  background-color: rgb(231, 231, 231);
+  border-left: 2px solid #1E90FF;
+}
+.menu ul li svg{
+  margin-right: 5px ;
+}
+.menu ul li:last-child{
+  border-bottom: none;
+}
+.invite{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  margin: 4px;
+}
+.invite p:nth-child(1){
+  font-size: 13px;
+  font-weight: 600;
+  color: gray;
+}
+.invite p:nth-child(2){
+  border-radius: 12px;
+  padding: 2px 7px;
+  background-color: red;
+  color: white;
+}
+.invitation{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.invitation div{
+  height: 25vh;
+  border-radius: 10px;
+  background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
+  background-size: cover;
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.invitation button{
+  border-radius: 6px;
+  padding: 7px;
+  margin: 5px;
+  border: none;
+}
+.invitation button:nth-child(2){
+  background-color: #1E90FF;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+}
+.status{
+  height: 25vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.addStatus{
+  height: 25vh;
+  background-color: skyblue;
+  width: 9vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  background-image: url('https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 550;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+
+}
+.addStatus button{
+  background-color: white;
+  font-weight: 700;
+  color: #1E90FF;
+  border: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 5px;
+  border-radius: 5px;
 }
-
-.main {
-  padding: 5rem 0;
+.statusContainer{
+  width: 70vw;
+  overflow-x: scroll;
+  scrollbar-width: 0px;
+}
+.statusContainer::-webkit-scrollbar{
+  width: 0px;
+  height: 0;
+  background: none;
+}
+.scroller{
+  display: flex;
+  width: 80vw;
+}
+.fstatus{
+  height: 25vh;
+  background-color: skyblue;
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-image: url('https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 10px;
+  margin-left:10px;
+}
+.fstatus img{ 
+  align-self: flex-start;
+  border-radius: 12px;
+  width: 30%;
+}
+.create{
+  display: flex;
+  height: 10vh;
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.create img{
+  width: 7%;
+}
+.create input{
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border: none;
 }
-
-.footer {
+.create input:focus{
+  outline: none;
+}
+.create button{
+  padding: 10px 15px;
+  color: white;
+  background-color: #1E90FF;
+  border: none;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+.uimage{
+  padding: 10px;
+  background-color: white;
+  margin: 0 10px;
+}
+.uimage img{
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+}
+.posts{
+ 
+}
+.posts::-webkit-scrollbar{
+  width: 0px;
+  height: 0;
+  background: none;
+}
+.post{
+  background-color: white;
+  padding: 10px;
+  border-radius:10px ;
+  margin: 10px;
+}
+.post div:nth-child(1) {
   display: flex;
-  justify-content: center;
+  font-size: 13px;
   align-items: center;
 }
-
-.footer a {
+.post div:nth-child(1) img{
+  width: 5%;
+}
+.post div:nth-child(1) div p:nth-child(1){
+  font-weight: 700;
+}
+.post div img{
+  width: 100%;
+  border-radius: 10px;
+}
+.detail{
+  padding: 10px;
+}
+.like{
   display: flex;
-  justify-content: center;
+}
+.like div:nth-child(1),.like div:nth-child(2){
+  width: 50%;
   align-items: center;
-  flex-grow: 1;
+  font-size: 16px;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+}
+.requestheader{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 550;
+  align-items: center;
+  color: gray;
+}
+.requestheader button{
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #1E90FF;
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+}
+.request{
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px;  
+  margin: 4px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.request div:nth-child(1){
+  display: flex;
+  font-size: 14px;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.request img{
+  border-radius: 10px;
+  width: 15%;
+  margin-right: 10px;
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.bold{
+  font-weight: 700;
+  display: inline;
 }
-
-.title,
-.description {
+.request div:nth-child(2){
   text-align: center;
 }
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.request div:nth-child(2) button{
+   padding: 8px 20px;
+   font-weight: 700;
+   margin: 5px;
+   border: none;
+   border-radius: 5px;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.request div:nth-child(2) button:nth-child(1){
+  background-color:#1E90FF;
+  color: white;
 }
-
-.grid {
+.request div:nth-child(2) button:nth-child(2){
+  background-color:white;
+  color: gray;
+  border: 1px solid gray;
+}
+.friendsHeader{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin: 5px;
+  align-items: center;
+  color: gray;
+}
+.friendsHeader button{
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+  color: white;
+  background-color: gray;
+  border: none;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+  padding: 4px;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.friend{
+  display: flex;
+  align-items: center;
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.friendsContainer{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.friend img{
+  width: 15%;
+  border-radius: 15px;
 }
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.friend p{
+  padding: 10px;
+  font-weight: 550;
+  color: gray;
 }
